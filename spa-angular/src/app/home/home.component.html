@@ -1,0 +1,12 @@
+<spa-header></spa-header>
+<main>
+  <spa-form (respostaFamilia)="reciverFeedback($event)"></spa-form>
+
+  <spa-message *ngIf="error; else elseBlock" [mensagem]="mensagem">
+  </spa-message>
+
+  <ng-template #elseBlock>
+    <spa-message [mensagem]="mensagem"></spa-message>
+    <spa-table [item]="pessoas"></spa-table>
+  </ng-template>
+</main>

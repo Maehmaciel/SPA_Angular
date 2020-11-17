@@ -1,0 +1,18 @@
+.message {
+  padding: 20px;
+  margin: 20px 0px;
+  color: white;
+}
+
+.message.danger {
+  background-color: #f44336;
+}
+.message.success {
+  background-color: #4caf50;
+}
+.message.info {
+  background-color: #2196f3;
+}
+.message.warning {
+  background-color: #ff9800;
+}

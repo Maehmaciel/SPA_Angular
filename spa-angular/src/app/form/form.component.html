@@ -1,0 +1,33 @@
+<form
+  [formGroup]="cadastro"
+  novalidate
+  (ngSubmit)="salvar()"
+  (ngReset)="reiniciar()"
+>
+  <div class="inputContainer">
+    <mat-form-field class="margin-10" appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Nome" formControlName="nome" />
+    </mat-form-field>
+
+    <mat-form-field class="margin-10" appearance="outline">
+      <mat-label>Idade</mat-label>
+
+      <input
+        matInput
+        placeholder="Idade"
+        type="number"
+        min="0"
+        formControlName="idade"
+      />
+    </mat-form-field>
+    <mat-error *ngIf="cadastro.touched || cadastro.dirty" class="margin-10"
+      >Preencha ambos os campos com informações válidas</mat-error
+    >
+  </div>
+
+  <button type="submit" mat-raised-button class="margin-10" color="primary">
+    Cadastrar
+  </button>
+  <button type="reset" mat-stroked-button color="primary">Limpar</button>
+</form>
